@@ -21,6 +21,7 @@ const express=require('express');
 const router=express.Router();
 
 const {getuser,postuser,putuser,deleteuser, loginserver}=require('../controllers/userroutescontrollers');
+const { route } = require('./productroutes');
 
 
  router.get('/',getuser)  

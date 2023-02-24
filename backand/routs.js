@@ -31,7 +31,7 @@ app.put('/', async (req, res) => {
    let result= await data.updateOne({name:"ikbal"},{$set:req.body}) 
    res.send(result);
    console.log(result);
-})
+})       
 
 
 app.delete('/', async (req, res) => {

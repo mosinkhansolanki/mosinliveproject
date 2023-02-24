@@ -127,7 +127,7 @@ const putuser = asynchandler(async (req, res) => {
     console.log("=====>", updateusers) 
 })
 
-
+ 
 
 
 
@@ -147,7 +147,8 @@ const deleteuser = asynchandler(async (req, res) => {
     }
     await result.remove();
     res.status(200).json({ massage: `delete data ${req.params.id}` });
-})
+}) 
+
 
 
 module.exports = {
@@ -155,6 +156,6 @@ module.exports = {
     postuser,
     putuser,
     deleteuser,
-    loginserver
+    loginserver,
 
 }
