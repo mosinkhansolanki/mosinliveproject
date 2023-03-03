@@ -3,7 +3,8 @@
 
 const jwt = require("jsonwebtoken")
 const asynchandler = require("express-async-handler")
-const user = require("../model/userauthmodel")
+// const user = require("../model/userauthmodel")
+const tudo = require("../model/todomodel")
 const protect = asynchandler(async(req,res,next)=>{
     let token 
     if(req.headers.authorization && req.headers.authorization.startsWith("Bearer")){
@@ -12,8 +13,9 @@ const protect = asynchandler(async(req,res,next)=>{
             token = req.headers.authorization.split(" ")[1]
             // verify token
             const decoded = jwt.verify(token, process.env.JWT_SECRET)
+             console.log(decoded);
            // Get usereauth from the token
-           req.user = await user.findById(decoded.id).select("_password")
+           req.tudo = await tudo.findById(decoded.id).select("_password")
            next()
         } catch (error) {
             console.log(error)
@@ -32,6 +34,6 @@ const protect = asynchandler(async(req,res,next)=>{
 
 
 module.exports = {
-    protect,
+    protect
 
 }

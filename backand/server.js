@@ -17,7 +17,16 @@ app.use(express.json());
 app.use('/api/use', require('./routes/useroutes'));
 app.use('/api/product', require('./routes/productroutes'))
 app.use('/api/userAuth', require('./routes/userauthroutes'));
-
+app.use('/api/usertodo',require('./routes/todoroutes'))
+app.use("/api/userstudent",require("./routes/studentroutes/routestudentroutes"))
+app.use("/api/studentcountry",require("./routes/studentroutes/routestudentcontry"))
+app.use('/api/studentcourse',require('./routes/studentroutes/routesstudentcourse'))
+app.use('/api/studentsingup',require('./routes/studentroutes/routesingup'))
+app.use('/api/studentprofile',require('./routes/studentroutes/profileroutes'))
+app.use('/api/studentemploy',require('./routes/studentroutes/employroutes'))
+app.use('/api/studentproduct',require('./routes/studentroutes/productroutes'))
+app.use('/api/desbord',require('./routes/desbord'))
+app.use('/api/studentuser',require('./routes/studentroutes/userroutes'))
 const multer = require('multer');
 const path = require('path');
 app.use('/uplode', express.static('image'))

@@ -16,17 +16,15 @@ res.status(400)
 throw new Error("User already exists") 
 
 } else{
-    
-    // console.log("wertyu====>>>",password.length); 
-    if(password.length >8 || password.length <8){
-
+    console.log("wertyu====>>>",password.length); 
+   if(password.length >8 || password.length <8){
         res.status(400)
         throw new Error("password lenght should be minimum * charactor")
     }
-}  
+}   
  let ceckemail =email.includes("@gmail.com") 
  if(!ceckemail){
-    res.status(400)
+    res.status(400) 
     throw new Error ('plese add the @gmil.com')
  }
 
@@ -99,7 +97,6 @@ const putuser = asyncHandler(async(req,res)=>{
      token :generateToken({massage:`data is update `})
  })
 })
-
 
 
 
