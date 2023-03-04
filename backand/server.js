@@ -27,6 +27,8 @@ app.use('/api/studentemploy',require('./routes/studentroutes/employroutes'))
 app.use('/api/studentproduct',require('./routes/studentroutes/productroutes'))
 app.use('/api/desbord',require('./routes/desbord'))
 app.use('/api/studentuser',require('./routes/studentroutes/userroutes'))
+app.use('/api/studentwishlish',require('./routes/studentroutes/wishlishroutes'))
+app.use('/api/studentaddtocart',require('./routes/studentroutes/addtocartroutes'))
 const multer = require('multer');
 const path = require('path');
 app.use('/uplode', express.static('image'))

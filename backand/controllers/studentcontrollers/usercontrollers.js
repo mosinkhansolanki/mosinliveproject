@@ -63,7 +63,7 @@ const userpost =async (req, res) => {
         
                 name,
                email,
-               number,
+               number,                                                                             
                name
 
             }) 
